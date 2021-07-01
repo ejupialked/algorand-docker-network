@@ -1,0 +1,84 @@
+version: '3'
+
+services:
+  relay-node:
+    tty: true 
+    image: algorand/stable:2.4.1
+    hostname: "relay-node"
+    command: >
+      bash -c "chmod 777 /root/data/start.sh && sh /root/data/start.sh"
+    ports:
+      - 4444:4444
+      - 4001:4001
+      - 5001:4002
+    volumes:
+    - ./Relay-Node/:/root/data:rw
+    environment:
+      ALGORAND_DATA: "/root/data"
+    
+  node_1:
+    tty: true
+    image: algorand/stable:2.4.1
+    hostname: "node-1"
+    command: >
+      bash -c "chmod 777 /root/data/start.sh && sh /root/data/start.sh"
+    ports:
+      - 4002:4001
+      - 5002:4002
+    volumes:
+    - .Node-1/:/root/data:rw
+    environment:
+      ALGORAND_DATA: "/root/data"
+      RELAY_ADDR: "relay:4161"
+    depends_on:
+      - relay-node
+
+  node_2:
+    tty: true
+    image: algorand/stable:2.4.1
+    hostname: "node-2"
+    command: >
+      bash -c "sh /root/data/start.sh"
+    ports:
+      - 4003:4001
+      - 5003:4002
+    volumes:
+    - ./Node-2/:/root/data:rw
+    environment:
+      ALGORAND_DATA: "/root/data"
+      RELAY_ADDR: "relay:4161"
+    depends_on:
+      - relay-node1
+
+  node_3:
+    tty: true
+    image: algorand/stable:2.4.1
+    hostname: "node-3"
+    command: >
+      bash -c "sh /root/data/start.sh"
+    ports:
+      - 4004:4001
+      - 5004:4002
+    volumes:
+    - ./Node-3/:/root/data:rw
+    environment:
+      ALGORAND_DATA: "/root/data"
+      RELAY_ADDR: "relay:4161"
+    depends_on:
+      - relay-node1
+  node_4:
+    tty: true
+    image: algorand/stable:2.4.1
+    hostname: "node-4"
+    command: >
+      bash -c "sh /root/data/start.sh"
+    ports:
+      - 4005:4001
+      - 5005:4002
+    volumes:
+    - ./Node-4/:/root/data:rw
+    environment:
+      ALGORAND_DATA: "/root/data"
+      RELAY_ADDR: "relay:4161"
+    depends_on:
+      - relay-node1
