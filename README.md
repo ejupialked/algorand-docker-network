@@ -7,7 +7,7 @@ This repository contains two Bash scripts for creating an Algorand private netwo
 ```
 sh createNetwork.sh 4
 ```
-This will create a folder named 4-nodes-net/ with 4 participants and 1 relay node. The common genesis file distributes an even amount of stake to each participant (A participants has one account). The relay node does not participate in the consensus protocol.
+This will create a folder named 4-nodes-net/ with 4 participants and 1 relay node. The common genesis file distributes an even amount of stake to each participant (A participant has one account). The relay node does not participate in the consensus protocol.
 
 ### Deploy the network:
 
