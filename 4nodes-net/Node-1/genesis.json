@@ -1,0 +1,73 @@
+{
+  "alloc": [
+    {
+      "addr": "7777777777777777777777777777777777777777777777777774MSJUVU",
+      "comment": "RewardsPool",
+      "state": {
+        "algo": 125000000000000,
+        "onl": 2
+      }
+    },
+    {
+      "addr": "A7NMWS3NT3IUDMLVO26ULGXGIIOUQ3ND2TXSER6EBGRZNOBOUIQXHIBGDE",
+      "comment": "FeeSink",
+      "state": {
+        "algo": 100000,
+        "onl": 2
+      }
+    },
+    {
+      "addr": "WWM7RU6ZZICZTFLJYBH4WWFRMNVPD3ZMSNIMU7F7M3URADCZCHDPK2T2ZM",
+      "comment": "Wallet1",
+      "state": {
+        "algo": 2500000000000000,
+        "onl": 1,
+        "sel": "/hiNf8fGRsZb36YyckbHBiWQcb6neYuRDyzExt1MESo=",
+        "vote": "UiT1xSHOOP2DrCsLzKubdKNINDZ+beveRSvttWhfzB0=",
+        "voteKD": 10000,
+        "voteLst": 3000000
+      }
+    },
+    {
+      "addr": "DEQNSC4MZNLIXOWCXRQTSLLYS7XQT52ZT5XNOHUME3SLUMUSYSYSSA5KI4",
+      "comment": "Wallet2",
+      "state": {
+        "algo": 2500000000000000,
+        "onl": 1,
+        "sel": "pSL0XekuOa+NAtgDTzpgGKRAFChbV9usJW/7/1hGdrM=",
+        "vote": "S94t5XOwpyDRXQ1YjNVVBRn1SipBVZzx/rObAgKJRZQ=",
+        "voteKD": 10000,
+        "voteLst": 3000000
+      }
+    },
+    {
+      "addr": "XR3POVAWRAITXWKL5SBZRKITSNAGNNUNEQ2LO6OHHJXT6F7ROSXZ5IDY4A",
+      "comment": "Wallet3",
+      "state": {
+        "algo": 2500000000000000,
+        "onl": 1,
+        "sel": "kB4wMSz9GB0dsT6tgKxHIRiKdJifv2Q9145aPvzenfU=",
+        "vote": "qn/REyuM+8YVTmwaDzq/1YstXjphvU/UujfD4Mch9R4=",
+        "voteKD": 10000,
+        "voteLst": 3000000
+      }
+    },
+    {
+      "addr": "APDU264NIS2QKAHB7UJENRI7ZQB4GXSCNXAY7W3AXRYZBX2BM7BELZRWCI",
+      "comment": "Wallet4",
+      "state": {
+        "algo": 2500000000000000,
+        "onl": 1,
+        "sel": "t3NjG+cicayVvhwaQt4bCl3UQRmoVR0nZTDNBgBkUas=",
+        "vote": "ANOeP96sfsssua8WU9KWwm3u+h6n+KKHTiIHcQfb2ak=",
+        "voteKD": 10000,
+        "voteLst": 3000000
+      }
+    }
+  ],
+  "fees": "A7NMWS3NT3IUDMLVO26ULGXGIIOUQ3ND2TXSER6EBGRZNOBOUIQXHIBGDE",
+  "id": "v1",
+  "network": "4nodes-net",
+  "proto": "https://github.com/algorandfoundation/specs/tree/3a83c4c743f8b17adfd73944b4319c25722a6782",
+  "rwd": "7777777777777777777777777777777777777777777777777774MSJUVU"
+}

@@ -1,0 +1,64 @@
+services:
+  node_1:
+    command: bash -c "/root/node/goal node start -p "Relay-Node:4444" -d /root/data
+      && /root/node/carpenter -file /root/data/node.log"
+    depends_on:
+    - relay_node
+    hostname: Node-1
+    image: algorand/stable:2.4.1
+    ports:
+    - 4002:4001
+    - 5002:4002
+    tty: 'true'
+    volumes:
+    - ./Node-1/:/root/data:rw
+  node_2:
+    command: bash -c "/root/node/goal node start -p "Relay-Node:4444" -d /root/data
+      && /root/node/carpenter -file /root/data/node.log"
+    depends_on:
+    - relay_node
+    hostname: Node-2
+    image: algorand/stable:2.4.1
+    ports:
+    - 4003:4001
+    - 5003:4002
+    tty: 'true'
+    volumes:
+    - ./Node-2/:/root/data:rw
+  node_3:
+    command: bash -c "/root/node/goal node start -p "Relay-Node:4444" -d /root/data
+      && /root/node/carpenter -file /root/data/node.log"
+    depends_on:
+    - relay_node
+    hostname: Node-3
+    image: algorand/stable:2.4.1
+    ports:
+    - 4004:4001
+    - 5004:4002
+    tty: 'true'
+    volumes:
+    - ./Node-3/:/root/data:rw
+  node_4:
+    command: bash -c "/root/node/goal node start -p "Relay-Node:4444" -d /root/data
+      && /root/node/carpenter -file /root/data/node.log"
+    depends_on:
+    - relay_node
+    hostname: Node-4
+    image: algorand/stable:2.4.1
+    ports:
+    - 4005:4001
+    - 5005:4002
+    tty: 'true'
+    volumes:
+    - ./Node-4/:/root/data:rw
+  relay_node:
+    command: bash -c "/root/node/goal node start -d /root/data && /root/node/carpenter
+      -file /root/data/node.log"
+    hostname: Relay-Node
+    image: algorand/stable:2.4.1
+    ports:
+    - 4001:4001
+    tty: 'true'
+    volumes:
+    - ./Relay-Node/:/root/data:rw
+version: '3'
